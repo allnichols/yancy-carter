@@ -3,20 +3,7 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections:
-- type: directory
-  path: content
-  label: Document
-  create: all
-  match: "'**/*'"
-  templates:
-  - home-page
-- type: heading
-  label: Content
-- type: document
-  path: content/pages
-  label: Pages
-  read_only: true
+sections: 
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
