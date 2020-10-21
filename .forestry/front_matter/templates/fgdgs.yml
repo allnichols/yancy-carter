@@ -1,0 +1,13 @@
+---
+label: fgdgs
+hide_body: true
+fields:
+- type: text
+  name: catch_phrase
+  label: catch_phrase
+- type: text
+  name: sub_catch_phrase
+  label: sub_catch_phrase
+- type: text
+  name: about_text
+  label: about_text
