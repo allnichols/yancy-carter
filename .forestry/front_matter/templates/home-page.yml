@@ -13,3 +13,5 @@ fields:
   config:
     required: false
   label: sub catch phrase
+pages:
+- content/HomePage.md
