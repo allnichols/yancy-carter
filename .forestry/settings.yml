@@ -16,6 +16,7 @@ sections:
 - type: document
   path: content/pages
   label: Pages
+  read_only: true
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
