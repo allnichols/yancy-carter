@@ -13,5 +13,14 @@ fields:
   config:
     required: false
   label: sub catch phrase
+- name: about_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: About text
 pages:
 - content/HomePage.md
