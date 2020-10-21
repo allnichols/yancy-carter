@@ -1,4 +1,14 @@
 ---
 label: Home page
 hide_body: true
-fields: []
+fields:
+- name: catch_phrase
+  type: text
+  config:
+    required: false
+  label: Catch Phrase
+- name: sub_catch_phrase
+  type: text
+  config:
+    required: false
+  label: sub catch phrase
