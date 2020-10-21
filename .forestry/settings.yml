@@ -7,7 +7,6 @@ sections:
 - type: document
   path: pages
   label: Pages
-  match: "**/*"
 - type: heading
   label: Content
 upload_dir: uploads
