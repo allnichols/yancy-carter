@@ -14,8 +14,6 @@
   },
   "devDependencies": {
     "gray-matter": "^4.0.2",
-    "postcss-preset-env": "^6.7.0",
-    "react-markdown": "^5.0.0",
-    "tailwindcss": "^1.9.5"
+    "react-markdown": "^5.0.0"
   }
 }

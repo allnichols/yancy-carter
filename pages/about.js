@@ -4,7 +4,7 @@ function about() {
     return(
         <>
         <Nav />
-        <h1 className="text-2xl">About</h1>
+        <h1 style={{marginTop:'0'}}>About</h1>
         </>
     )
 }

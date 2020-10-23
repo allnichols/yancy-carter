@@ -1,0 +1,37 @@
+.Header{
+    height: 4rem;
+}
+
+.LinksContainer{
+    background: #12343B;
+    color: white;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    bottom: 0;
+    left: -100%;
+    transition: .3s ease-in-out;
+    z-index: 2;
+}
+
+.Open{
+    left:0;
+}
+
+.Burger{
+    position: absolute;
+    right: 1.2rem;
+    top:1rem;
+    z-index:3;
+    width: 45px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Burger span{
+    height: 3px;
+    margin: 3.5px 0;
+    background-color: black;
+    border-radius: 3px;
+}

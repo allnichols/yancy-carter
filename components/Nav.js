@@ -1,29 +1,36 @@
 import Link from 'next/link';
+import {useState} from 'react';
+import styles from '../styles/Nav.module.css';
+
 
 export default function Nav(){
+    const [isOpen, setMenuState] = useState(false);
+   
+    function toggleMenu(){
+        setMenuState(!isOpen);
+    }
+
     return(
-    <header>
-        <nav>
+    <header className={styles.Header}>
+        <h3>Yancy Carter</h3>
+        <nav className={`${styles.LinksContainer} ${isOpen ? styles.Open : null}`}>
             <ul>
-                <li>
+                <li onClick={toggleMenu}>
                     <Link href="/">
                         home
                     </Link>
                 </li>
-                <li>
+                <li onClick={toggleMenu}>
                     <Link href="/about">
                         About
                     </Link>
                 </li>
             </ul>
         </nav>
-        <div>
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <line x1="4" y1="6" x2="20" y2="6" />
-            <line x1="4" y1="12" x2="20" y2="12" />
-            <line x1="4" y1="18" x2="20" y2="18" />
-        </svg>
+        <div className={styles.Burger} onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
     )

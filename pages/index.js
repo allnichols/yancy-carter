@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <Nav />
-     {/* <h1 className="text-5xl">Get Help, Get Results, Get Paid</h1> */}
+     {/* <h1>Get Help, Get Results, Get Paid</h1> */}
     </div>
   )
 }
