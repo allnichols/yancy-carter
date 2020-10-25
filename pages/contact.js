@@ -1,13 +1,13 @@
+import React from 'react';
 import Main from '../components/Container';
 import Nav from '../components/Nav';
 
-function about() {
+export default function contact(){
+    
     return(
         <Main>
-         <Nav />
-         <h1 style={{marginTop:'0'}}>About</h1>
+            <Nav />
+            <h1>Contact</h1>
         </Main>
     )
 }
-
-export default about;
