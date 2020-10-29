@@ -17,7 +17,7 @@ export default function Nav(){
 
     return(
     <header className={styles.Header}>
-        <h3><Link href="/">Yancy Carter</Link></h3>
+        <Link href="/">Yancy Carter</Link>
         <nav className={`${styles.LinksContainer} ${isOpen ? styles.Open : null}`}>
             <ul>
                 <li onClick={toggleMenu}>
