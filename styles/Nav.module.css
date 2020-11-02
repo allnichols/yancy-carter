@@ -93,6 +93,7 @@
     .SubMenu{
         transition: none;
         list-style-type: none;
+        background-color: white;
     }
     .SubList:hover .SubMenu {
         height: 200px;
