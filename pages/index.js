@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Container from '../components/Container';
+import HomeForm from '../components/HomeForm';
 import Nav from '../components/Nav';
 import styles from '../styles/Home.module.css'
 
@@ -161,16 +162,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="contact">      
-            <Container>
-              <div className="container contact_box">
-                <h1>Let's Seek Justice</h1>
-                  <form>
-                    
-                  </form>
-              </div>
-            </Container>       
-      </section>
+      <HomeForm />
       
       <section className="footer-section">
         <footer className="container footer">
@@ -188,7 +180,7 @@ export default function Home() {
             
           
             </footer>
-</section>
+      </section>
 
     </div>
   )
