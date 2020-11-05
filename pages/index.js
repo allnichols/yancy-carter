@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Container from '../components/Container';
 import HomeForm from '../components/HomeForm';
+import Footer from '../components/footer';
 import Nav from '../components/Nav';
 import styles from '../styles/Home.module.css'
 
@@ -10,7 +11,6 @@ export default function Home() {
     <div>
       <Head>
         <title>Create Next App</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
         <link rel="stylesheet" href="https://use.typekit.net/pou0knh.css"></link>
       </Head>
 
@@ -163,8 +163,10 @@ export default function Home() {
       </section>
 
       <HomeForm />
+
+      <Footer />
       
-      <section className="footer-section">
+      {/* <section className="footer-section">
         <footer className="container footer">
           <Container>
 
@@ -180,7 +182,7 @@ export default function Home() {
             
           
             </footer>
-      </section>
+      </section> */}
 
     </div>
   )
