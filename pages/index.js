@@ -180,7 +180,6 @@ export async function getStaticProps() {
       'slug',
   ]);
 
-  console.log(pages, 'page')
   return {
       props: {
           page:[...pages]

@@ -19,6 +19,7 @@ export async function getStaticProps({ params }) {
         'title',
         'content'
     ]);
+    
     return {
         props: {
             page:{

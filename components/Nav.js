@@ -10,7 +10,6 @@ export default function Nav({slugs}){
 
     const router = useRouter();
     const { id } = router.query;
-    console.log(slugs)
 
     function toggleMenu(){
         setMenuState(!isOpen);
