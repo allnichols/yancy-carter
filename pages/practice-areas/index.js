@@ -4,7 +4,7 @@ import Footer from '../../components/footer';
 import { getAllPages } from '../../lib/api';
 
 export default function practiceAreas({pages}) {
-    console.log(pages)
+    
     return(
         <>
             <Main>

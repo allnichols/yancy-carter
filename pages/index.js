@@ -119,17 +119,6 @@ export default function Home(props) {
                     )
                   })}
                 </ul>
-              {/* <ul>
-                    <li><a href="#">Sexual Harrasment</a></li>
-                    <li><a href="#">Workplace Discrimination</a></li>
-                    <li><a href="#">Hostile Work Environment</a></li>
-                    <li><a href="#">Wages and Compensation</a></li>
-              </ul>
-              <ul>
-              <li><a href="#">Wrongful Termination</a></li>
-                    <li><a href="#">Personal Injury</a></li>
-                    <li><a href="#">Criminal Law</a></li>
-              </ul> */}
           </div>
         </div>
       </Container>
