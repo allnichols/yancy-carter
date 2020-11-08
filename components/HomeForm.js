@@ -30,7 +30,6 @@ export default function HomeForm(){
         message: ''
       });
 
-      console.log(contact);
       const handleChange = e =>
       setContact({ ...contact, [e.target.name]: e.target.value });
 

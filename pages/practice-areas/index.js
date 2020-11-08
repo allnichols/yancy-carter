@@ -3,8 +3,8 @@ import Nav from '../../components/Nav';
 import Footer from '../../components/footer';
 import { getAllPages } from '../../lib/api';
 
-export default function practiceAreas({pages}) {
-    
+export default function practiceAreas({page}) {
+    console.log(page)
     return(
         <>
             <Main>
@@ -19,16 +19,14 @@ export default function practiceAreas({pages}) {
 export async function getStaticProps() {
     const page = getAllPages([
         'title',
-        'slug',
-        'content'
+        'slug'
     ]);
 
-    console.log(page, 'page')
     return {
         props: {
-            page:{
+            page:[
                 ...page,
-            },
+            ],
         },
     }
 }

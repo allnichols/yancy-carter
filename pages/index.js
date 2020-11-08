@@ -112,8 +112,8 @@ export default function Home(props) {
                   {props.page.map( info =>{
                     return (
                       <li key={info.slug}>
-                        <Link href='/practice-areas/[slug]' as={`/practice-areas/${info.slug}`}>
-                          {info.title}
+                        <Link href='practice-areas/[slug]' as={`practice-areas/${info.slug}`}>
+                          <a>{info.title}</a>
                         </Link>
                       </li>
                     )

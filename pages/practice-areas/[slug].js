@@ -1,14 +1,19 @@
 import { getPageBySlug, getAllPages } from '../../lib/api';
 import Container from '../../components/Container';
 import Nav from '../../components/Nav';
+import { useRouter } from 'next/router';
 
 
 export default function areaPage({ page }) {
-    
+    const router = useRouter();
+    console.log(page)
     return (
         <Container>
             <Nav/>
-            <p>{page.content}</p>
+            {/* {
+                router.isFallback ?
+            } */}
+            <h2>{page.title}</h2>
         </Container>
     )
 }
@@ -19,12 +24,10 @@ export async function getStaticProps({ params }) {
         'title',
         'content'
     ]);
-    
     return {
         props: {
             page:{
-                ...page,
-                
+                ...page
             },
         },
     }
@@ -41,7 +44,7 @@ export async function getStaticPaths() {
                 }
             }
         }),
-        fallback:true,
+        fallback:false,
     }
     
 }
