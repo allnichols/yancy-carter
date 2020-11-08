@@ -4,7 +4,7 @@ import Nav from '../../components/Nav';
 
 
 export default function areaPage({ page }) {
-    console.log(page, 'page content')
+    
     return (
         <Container>
             <Nav/>
@@ -14,13 +14,12 @@ export default function areaPage({ page }) {
 }
 
 export async function getStaticProps({ params }) {
-    console.log(params)
+    
     const page = getPageBySlug(params.slug, [
         'title',
         'content'
     ]);
 
-    console.log(page, 'page')
     return {
         props: {
             page:{
