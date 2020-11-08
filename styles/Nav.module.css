@@ -1,0 +1,152 @@
+.Header{
+    height: 4rem;
+}
+
+@media(min-width:800px){
+    .Header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.LinksContainer{
+    background: #12343B;
+    color: white;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    bottom: 0;
+    left: -110%;
+    transition: .3s ease-in-out;
+    z-index: 2;
+}
+
+.LinksContainer > ul {
+    list-style-type: none;
+    margin-top: 5rem;
+}
+
+.LinksContainer > ul li{
+    margin: 10px 15px;
+    font-size: 1rem;
+}
+.Contact_Box{ display: none;}
+.Contact_Box_Mobile{
+    border-top: 1px solid #E1B382;
+    width: 50%;
+    margin-left: 3.5rem;
+    margin-top:2rem;
+    display: flex;
+    flex-direction: column;
+}
+.Contact_Box a{
+    margin:1rem;
+}
+
+@media(min-width:800px){
+    .LinksContainer{
+        position: relative;
+        background-color: white;
+        color: black;
+        left: 0;
+        height: 50px;
+        width: auto;
+    }
+    .LinksContainer ul {
+        margin-top: 1rem;
+    }
+    .LinksContainer > ul > li{
+        display: inline;
+    }
+    .Contact_Box{
+        display: flex;
+        flex-direction: column;
+        border-left: 1px solid lightgrey;
+        padding-left: 20px;
+    }
+    .Contact_Box a{
+        margin: .2rem;
+    }
+    .Contact_Box_Mobile{
+        display: none;
+    }
+}
+
+.SubList{
+   position: relative;
+}
+.SubMenu {
+    margin-top: 1rem;
+    overflow: hidden;
+    height: 0;
+    right: 0;
+    transition: .3s ease-in-out;
+}
+
+.OpenSubMenu_Mobile{
+    height: 200px;
+}
+
+@media(min-width:800px){
+    .SubMenu{
+        transition: none;
+        list-style-type: none;
+        background-color: white;
+    }
+    .SubList:hover .SubMenu {
+        height: 200px;
+        border: 1px solid lightgray;
+        position: absolute;
+        width: 150px;
+        left: 0;
+        padding-left: 0;
+        margin-top: 0;
+    }
+}
+
+.Open{
+    left:0;
+}
+
+
+
+.Burger{
+    position: absolute;
+    right: 1.2rem;
+    top:1rem;
+    z-index:3;
+    width: 45px;
+    display: flex;
+    flex-direction: column;
+}
+@media(min-width: 900px){
+    .Burger{
+        display: none;
+    }
+}
+
+.Burger span{
+    height: 3px;
+    margin: 3.5px 0;
+    background-color: black;
+    border-radius: 3px;
+    transition: .3s ease-in;
+}
+
+.Burger_Close span{
+    background: white;
+}
+
+.Burger_Close span:first-of-type{
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.Burger_Close span:nth-of-type(2){
+    opacity: 0;
+}
+
+.Burger_Close span:last-of-type{
+    transform: rotate(45deg) translate(-8px, -6px);
+}
