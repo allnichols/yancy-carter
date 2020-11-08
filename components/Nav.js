@@ -1,12 +1,17 @@
 import Link from 'next/link';
+import {useRouter} from 'next/router';
 import {useState} from 'react';
 import styles from '../styles/Nav.module.css';
 
 
-export default function Nav(){
+export default function Nav({slugs}){
     const [isOpen, setMenuState] = useState(false);
     const [isDropDownOpen, setDropDown] = useState(false);
-   
+
+    const router = useRouter();
+    const { id } = router.query;
+    console.log(slugs)
+
     function toggleMenu(){
         setMenuState(!isOpen);
     }
@@ -30,26 +35,24 @@ export default function Nav(){
                         Contact
                     </Link>
                 </li> 
-                <li className={styles.SubList} onClick={toggleDropdown}>
-                    Practice Areas
-                    <ul className={`${styles.SubMenu} ${isDropDownOpen ? styles.OpenSubMenu_Mobile : null}`}>
-                        {/* Presonal Injury, Criminal Law */}
-                        <li>Personal Injury</li>
-                        <li>Criminal Law</li>
-                    </ul>
-                </li>  
+                <li>
+                    <Link href="/practice-areas">
+                        Practice Areas
+                    </Link>
+                </li>
+               
             </ul>
 
             <div className={styles.Contact_Box_Mobile}>
                 <a href="#">Email</a>
-                <a href="#">Phone</a>
+                <a href="#">Phone: 504-319-3625</a>
              </div>
         </nav>
 
         {/* Desktop / Tablet / Laptop Contacts */}
         <div className={styles.Contact_Box}>
-            <a href="#">Email</a>
-            <a href="#">Phone</a>
+            <a href="#">Email: yancycarter@yahoo.com</a>
+            <a href="#">Phone: 504-319-3625</a>
         </div>
       
 

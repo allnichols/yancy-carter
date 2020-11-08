@@ -5,8 +5,12 @@ import HomeForm from '../components/HomeForm';
 import Footer from '../components/footer';
 import Nav from '../components/Nav';
 import styles from '../styles/Home.module.css'
+import { getAllPages } from '../lib/api';
 
-export default function Home() {
+
+export default function Home(props) {
+
+
   return (
     <div>
       <Head>
@@ -15,7 +19,7 @@ export default function Home() {
       </Head>
 
       <Container>
-        <Nav />
+        <Nav/>
       </Container>
     <section className={styles.above_the_fold}>
       <Container>
@@ -104,7 +108,18 @@ export default function Home() {
           <div className={styles.practice_areas_links}>
                <h4 className="small-header-dark">Practice Areas</h4>
                 <h1 className={styles.practice_tag}>Let's Seek Justice Together</h1>
-              <ul>
+                <ul>
+                  {props.page.map( info =>{
+                    return (
+                      <li key={info.slug}>
+                        <Link href='/practice-areas/[slug]' as={`/practice-areas/${info.slug}`}>
+                          {info.title}
+                        </Link>
+                      </li>
+                    )
+                  })}
+                </ul>
+              {/* <ul>
                     <li><a href="#">Sexual Harrasment</a></li>
                     <li><a href="#">Workplace Discrimination</a></li>
                     <li><a href="#">Hostile Work Environment</a></li>
@@ -114,7 +129,7 @@ export default function Home() {
               <li><a href="#">Wrongful Termination</a></li>
                     <li><a href="#">Personal Injury</a></li>
                     <li><a href="#">Criminal Law</a></li>
-              </ul>
+              </ul> */}
           </div>
         </div>
       </Container>
@@ -165,25 +180,22 @@ export default function Home() {
       <HomeForm />
 
       <Footer />
-      
-      {/* <section className="footer-section">
-        <footer className="container footer">
-          <Container>
-
-            <div className=" footer-nav">
-            
-              </div>
-
-              <div className="one-half column footer-contact">
-                  <a href="tel:2813334444">281-333-4444</a>
-                  <a href="mailto:yancycarter@yahoo.com">yancycarter@yahoo.com</a>
-              </div>
-          </Container>
-            
-          
-            </footer>
-      </section> */}
 
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const pages = getAllPages([
+      'title',
+      'slug',
+  ]);
+
+  console.log(pages, 'page')
+  return {
+      props: {
+          page:[...pages]
+              
+      },
+  }
 }

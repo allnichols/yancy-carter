@@ -1,14 +1,20 @@
 import { getPageBySlug, getAllPages } from '../../lib/api';
+import Container from '../../components/Container';
+import Nav from '../../components/Nav';
 
 
 export default function areaPage({ page }) {
     console.log(page, 'page content')
     return (
-        <p>{page.content}</p>
+        <Container>
+            <Nav/>
+            <p>{page.content}</p>
+        </Container>
     )
 }
 
 export async function getStaticProps({ params }) {
+    console.log(params)
     const page = getPageBySlug(params.slug, [
         'title',
         'content'
@@ -36,7 +42,7 @@ export async function getStaticPaths() {
                 }
             }
         }),
-        fallback:false,
+        fallback:true,
     }
     
 }
