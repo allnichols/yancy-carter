@@ -1,20 +1,32 @@
+import Head from 'next/head';
 import { getPageBySlug, getAllPages } from '../../lib/api';
 import Container from '../../components/Container';
 import Nav from '../../components/Nav';
-import { useRouter } from 'next/router';
+import markdownToHtml from '../../lib/markdownToHtml';
+import Footer from '../../components/footer';
 
 
 export default function areaPage({ page }) {
-    const router = useRouter();
-    console.log(page)
+    
     return (
+        <>
+        <Head>
+            <title>Create Next App</title>
+            <link rel="stylesheet" href="https://use.typekit.net/pou0knh.css"></link>
+      </Head>
         <Container>
             <Nav/>
-            {/* {
-                router.isFallback ?
-            } */}
-            <h2>{page.title}</h2>
+        
+        <div style={{marginTop:45}}>
+            <h4 className="small-header-dark">Practice Area</h4>
+            <h1>{page.title}</h1>
+            <div className="area-styles" dangerouslySetInnerHTML={{ __html: page.content}} />
+        </div>
+            
+
         </Container>
+        <Footer />
+        </>
     )
 }
 
@@ -24,10 +36,14 @@ export async function getStaticProps({ params }) {
         'title',
         'content'
     ]);
+
+    const content = await markdownToHtml(page.content || '');
+
     return {
         props: {
             page:{
-                ...page
+                ...page,
+                content,
             },
         },
     }

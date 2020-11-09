@@ -1,14 +1,21 @@
 import Main from '../components/Container';
 import Footer from '../components/footer';
 import Nav from '../components/Nav';
+import Head from 'next/head';
 
 function about() {
     return(
 
     <>
+    <Head>
+            <title>Yancy Carter - About</title>
+            <link rel="stylesheet" href="https://use.typekit.net/pou0knh.css"></link>
+    </Head>
         <Main>
          <Nav />
-         <h1>About</h1>
+         <div style={{marginTop:45}}>
+         <h4 className="small-header-dark">About</h4>
+         <h1>Yancy Carter</h1>
 
          <p> 
             I am Yancy Carter, born and raised in New Orleans, Louisiana with a lifelong dream of becoming an attorney.  
@@ -32,6 +39,8 @@ function about() {
             I am a member of the Houston Lawyers Association, Houston Bar Association, Southern District of Texas District Court. I am a member of the Louisiana Bar Association,
             Louisiana Middle District Court, Eastern District Court, Western District Court, Coushatta Tribal Court and finally a member of the United States Fifth Circuit Court of Appeals.
          </p>
+         </div>
+         
         </Main>
         <Footer />
     </>

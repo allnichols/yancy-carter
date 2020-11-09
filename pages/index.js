@@ -43,58 +43,38 @@ export default function Home(props) {
     <section className={styles.section_about}> 
       <Container>
        <div className={styles.about_box}>
-        <div className={styles.about_text} id="animate-text">
-              <h4 className="small-header-light">About</h4>
-              <h1>Yancy Carter</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Nihil quisquam dicta cum quaerat iste vero fuga asperiores 
-                  in culpa fugiat blanditiis, suscipit ducimus magnam? 
-                  Inventore quas nesciunt explicabo fuga magni?</p>
-              <a className="btn-main" href="/about">Learn More</a>
-          </div>
+        
+          <div className={styles.about_text} id="animate-text">
+                <h4 className="small-header-light">About</h4>
+                <h1>Yancy Carter</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nihil quisquam dicta cum quaerat iste vero fuga asperiores 
+                    in culpa fugiat blanditiis, suscipit ducimus magnam? 
+                    Inventore quas nesciunt explicabo fuga magni?</p>
+                <a className="btn-main" href="/about">Learn More</a>
+            </div>
+        
         {/* stats container */}
           <div className={styles.stats_container}> 
-          <div className={styles.stats_box}>
-            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-file-certificate" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                <path d="M5 8v-3a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-5" />
-                <circle cx="6" cy="14" r="3" />
-                <path d="M4.5 17l-1.5 5l3 -1.5l3 1.5l-1.5 -5" />
-            </svg>
-                
-                <hr />
-              <p>Trusted with over 30 years of Experience.</p>
               
-          </div>
-
-          <div className={styles.stats_box}>
-          <svg xmlns="http://www.w3.org/2000/svg" className="icon-briefcase" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <rect x="3" y="7" width="18" height="13" rx="2" />
-                <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
-                <line x1="12" y1="12" x2="12" y2="12.01" />
-                <path d="M3 13a20 20 0 0 0 18 0" />
-             </svg>
+                    <div className={styles.stats_box}>
+                        <p>Trusted</p>
+                        <hr/>
+                        <p>Over 30 Years of Experience</p>
+                    </div>
+                    <div className={styles.stats_box}>
+                        <p>Experienced</p>
+                        <hr/>
+                        <p>Over 300 Legal Cases</p>
+                    </div>
+                    <div className={styles.stats_box}>
+                        <p>Results</p>
+                        <hr/>
+                        <p> $1 Million  In Recovered Assets</p>
+                    </div>
                 
-                  <hr/>
-                <p>Over 300 Legal cases.</p>
-          </div>
-
-          <div className={styles.stats_box}>
-            <svg xmlns="http://www.w3.org/2000/svg" className="icon-coin" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1 -1.8 -1" />
-                  <path d="M12 6v2m0 8v2" />
-                </svg>
-                <hr/>
-              <p>$1 Million in recovered assets.</p>
-          </div>
-          
-        </div>
-       </div>
-       
+              </div>
+            </div>
 
       </Container>
     </section>
@@ -127,7 +107,7 @@ export default function Home(props) {
     <section className="faq">
        <Container>
          <div className="faq-box">
-           <div className="faq_imgBox"></div>
+           <div className="faq_imgBox" style={{backgroundImage: 'url(/faq.jpg)'}}></div>
 
             <div className="one-half column faq_content">
               <h4 className="small-header-dark"> FAQ </h4>

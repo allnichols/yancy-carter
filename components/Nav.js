@@ -1,22 +1,13 @@
 import Link from 'next/link';
-import {useRouter} from 'next/router';
 import {useState} from 'react';
 import styles from '../styles/Nav.module.css';
 
 
 export default function Nav({slugs}){
     const [isOpen, setMenuState] = useState(false);
-    const [isDropDownOpen, setDropDown] = useState(false);
-
-    const router = useRouter();
-    const { id } = router.query;
 
     function toggleMenu(){
         setMenuState(!isOpen);
-    }
-
-    function toggleDropdown() {
-        setDropDown(!isDropDownOpen);
     }
 
     return(
@@ -39,19 +30,51 @@ export default function Nav({slugs}){
                         Practice Areas
                     </Link>
                 </li>
-               
+                <li>
+                    <Link href="/faq">
+                        FAQ
+                    </Link>
+                </li>
             </ul>
 
             <div className={styles.Contact_Box_Mobile}>
-                <a href="#">Email</a>
-                <a href="#">Phone: 504-319-3625</a>
+                <div style={{ display: 'flex'}}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-phone" width="25" height="25" viewBox="0 0 24 24" strokeWidth="1" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                    </svg>
+                    <a style={{ paddingLeft: 10}} href="tel:2813334444">Email</a>
+                </div>
+                <div style={{ display: 'flex'}}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-mail" width="25" height="25" viewBox="0 0 24 24" strokeWidth="1" stroke="#fff" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <polyline points="3 7 12 13 21 7" />
+                    </svg> 
+                <a style={{ paddingLeft: 10}} href="mailto:yancycarter@yahoo.com">Phone: 504-319-3625</a>
+
+                </div>
              </div>
         </nav>
 
         {/* Desktop / Tablet / Laptop Contacts */}
         <div className={styles.Contact_Box}>
-            <a href="#">Email: yancycarter@yahoo.com</a>
-            <a href="#">Phone: 504-319-3625</a>
+        <div style={{ display: 'flex'}}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-phone" width="25" height="25" viewBox="0 0 24 24" strokeWidth="1" stroke="#B16900" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                    </svg>
+                    <a style={{ paddingLeft: 10}} href="tel:5043193625">504-319-3625</a>
+                </div>
+            <div style={{ display: 'flex'}}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-mail" width="25" height="25" viewBox="0 0 24 24" strokeWidth="1" stroke="#B16900" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <polyline points="3 7 12 13 21 7" />
+                    </svg> 
+                <a style={{ paddingLeft: 10}} href="mailto:yancycarter@yahoo.com">yancycarter@yahoo.com</a>
+
+                </div>
         </div>
       
 

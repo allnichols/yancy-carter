@@ -80,6 +80,9 @@
 @media only screen and (min-device-width : 768px) and 
 (max-device-width : 1024px) and 
 (orientation : portrait){
+  .above_the_fold{
+    height: 55vh;
+  }
   .cta_box{
     display: flex;
   }
@@ -133,14 +136,13 @@
     .about_box{
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      margin-top: 55px;
+      height: 360px;
       background: transparent linear-gradient(270deg, #12343B 0%, #60777C 300%);
     }
     .about_text{
       padding: 0 55px;
-      /* box-sizing: content-box; */
-      width: 55%;
+      box-sizing: content-box;
+      width: 90%;
     }
 }
 
@@ -155,9 +157,14 @@
   }
 }
 
+.stats_container{
+  margin-top: 25px;
+}
+
 .stats_box{
   display: flex;
   flex-direction: column;
+  background-color: var(--main-sec-blue);
   align-items: center;
   margin-bottom: 15px;
   padding: 20px 3px;
@@ -175,6 +182,23 @@
   margin-bottom: 10px;
   background-color: var(--dark-gold);
   border:1px solid #b16900;
+}
+
+@media only screen and
+ (min-device-width : 768px) and 
+ (max-device-width : 1024px) and 
+ (orientation : landscape){
+   .stats_container{
+     margin-top:-79px;
+     width: 100%;
+   }
+}
+
+@media(min-width: 900px){
+  .stats_container{
+    margin-top: -85px;
+    width: 50%;
+  }
 }
 
 /* Practice Areas */
@@ -228,12 +252,21 @@
   }
    .practice_areas_imgBox{
      height: 430px;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
    }
  }
 
 .practice_areas_links li:hover{
   width: 50%;
 } 
+
+.faq{}
+
+.faq_box{
+  padding: 25px;
+}
 
 /* Testimonial */
 .testimonials{

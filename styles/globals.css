@@ -56,6 +56,42 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 .small-header-light{ color:var(--light-gold) }
 .small-header-dark{ color:var(--dark-gold); }
 
+.areas-link{
+  font-family: var(--georgia-font);
+  font-weight: 500;
+  font-size: 2rem;
+  position: relative;
+  cursor: pointer;
+  margin-left: 35px;
+  transition: .3s;
+
+}
+
+.areas-link::before{
+  content: "";
+  position:absolute;
+  height: 4px;
+  width: 25px;
+  background-color: var(--light-gold);
+  top: 18px;
+  left: -30px;
+  transition: .3s;
+  z-index: 1;
+}
+
+.areas-link:hover{
+  margin-left: 45px;
+}
+.areas-link:hover::before{
+  width: 15px;
+}
+
+.area-styles h3{
+  font-family: 'georgia';
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 /* Buttons */
 .btn-main,
 .btn-main_black{
@@ -107,12 +143,6 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
       opacity: 0;
       transition: all .55s ease-in;
     }
-
-    .faq_imgBox.active{
-      transform:trianslate3d(0,0,0);
-      opacity: 1;
-    }
-
     .faq_content{
       margin-top: 9%;
     }
@@ -125,7 +155,10 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
     grid-gap: 30px;
    }
    .faq_imgBox{
-     height: 430px;
+     height: 400px;
+     background-position: center; /* Center the image */
+     background-repeat: no-repeat; /* Do not repeat the image */
+     background-size: cover;
    }
    .faq_content{
      margin-top:9%;
