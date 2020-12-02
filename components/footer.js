@@ -3,7 +3,7 @@ import Container from './Container';
 import styles from './footer.module.css';
 import Link from 'next/link';
 
-export default function Footer(params) {
+export default function Footer() {
     return (
         <section className={styles.footer_section}>
         <footer className={styles.footer}>
