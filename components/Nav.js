@@ -3,13 +3,15 @@ import {useState} from 'react';
 import styles from '../styles/Nav.module.css';
 
 
-export default function Nav({slugs}){
+export default function Nav(){
     const [isOpen, setMenuState] = useState(false);
 
     function toggleMenu(){
         setMenuState(!isOpen);
     }
 
+    
+  
     return(
     <header className={styles.Header}>
         <Link href="/">Yancy Carter</Link>

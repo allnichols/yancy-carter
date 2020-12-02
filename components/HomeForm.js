@@ -6,10 +6,12 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         marginBottom: '15px',
+        
 }
 
 const input = {
-     marginTop: 5
+     marginTop: 5,
+     padding: 8,
 }
 
 export default function HomeForm(){

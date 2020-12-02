@@ -10,7 +10,7 @@ import { getAllPages } from '../lib/api';
 
 export default function Home(props) {
 
-
+  
   return (
     <div>
       <Head>
@@ -19,7 +19,7 @@ export default function Home(props) {
       </Head>
 
       <Container>
-        <Nav/>
+        <Nav slugs={props.page}/>
       </Container>
     <section className={styles.above_the_fold}>
       <Container>
@@ -31,8 +31,8 @@ export default function Home(props) {
               <a className={styles.cta_btn}>Get in Touch</a>
             </Link>
           </div>
-          <div className={styles.cta_box_imgBox} style={{backgroundImage: 'url(/yancy-chair.gif)'}}>
-            
+          <div className={styles.cta_box_imgBox}>
+              <img src="yancy-chair.gif" />
           </div>
         </div>
 
